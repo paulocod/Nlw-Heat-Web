@@ -33,7 +33,7 @@ type AuthResponse = {
 export function AuthProvider(props: AuthProvider) {
   const [user, setUser] = useState<User | null>(null);
 
-  const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=ef9148b55a498ab3e74d`;
+  const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=afc38c0c27dd1b21a9ca`;
 
   async function signIn(githubCode: string) {
     const response = await api.post<AuthResponse>("authenticate", {
@@ -42,7 +42,7 @@ export function AuthProvider(props: AuthProvider) {
 
     const { token, user } = response.data;
 
-    localStorage.setItem("@dowhile:token", token);
+    localStorage.setItem("token", token);
 
     api.defaults.headers.common.authorization = `Bearer ${token}`;
 
@@ -51,11 +51,11 @@ export function AuthProvider(props: AuthProvider) {
 
   function signOut() {
     setUser(null);
-    localStorage.removeItem("@dowhile:token");
+    localStorage.removeItem("token");
   }
 
   useEffect(() => {
-    const token = localStorage.getItem("@dowhile:token");
+    const token = localStorage.getItem("token");
 
     if (token) {
       api.defaults.headers.common.authorization = `Bearer ${token}`;

@@ -16,8 +16,10 @@
 </p>
 
 <p  align="center">
-  <img alt="nlw-Login" src="https://user-images.githubusercontent.com/53629713/150217182-11f54452-cc21-4366-9c67-17c68680f32a.png" width="720px"/>
+  <img  alt="nlw-Login" src="https://user-images.githubusercontent.com/53629713/150217182-11f54452-cc21-4366-9c67-17c68680f32a.png" width="720px"/>
 <hr>
+</p>
+<p  align="center">
   <img alt="nlw-Message" src="https://user-images.githubusercontent.com/53629713/150217331-e8a110a2-2baa-4a10-b0ce-62b1ff0298cb.png" width="720px"/>
 </p>
 
